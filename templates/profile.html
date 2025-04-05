@@ -1,0 +1,13 @@
+<!-- templates/profile.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>User Profile</h2>
+    <div>
+        <h3>{{ username }}</h3>
+        <p><strong>Total Tasks:</strong> {{ task_count }}</p>
+        <p><strong>Pending Tasks:</strong> {{ pending_count }}</p>
+        <p><strong>Completed Tasks:</strong> {{ completed_count }}</p>
+        <p><strong>Completion Rate:</strong> {{ "%.2f"|format(completion_rate) }}%</p>
+    </div>
+{% endblock %}
